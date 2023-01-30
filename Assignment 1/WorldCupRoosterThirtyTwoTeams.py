@@ -1,3 +1,8 @@
+# Question 10E -
+# Double the size of the lists in problem A several times (you can make up team names like team1,
+# team2, etc.) and measure the amount of time it takes to create stable matches.  How fast does the
+# execution time grow in relation to the size of the lists?
+
 import time
 
 
@@ -119,5 +124,3 @@ superGroup2 = [
 ]
 
 stable_matching(superGroup1, superGroup2)
-
-#  Source:

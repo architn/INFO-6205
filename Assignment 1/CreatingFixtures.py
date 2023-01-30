@@ -1,3 +1,11 @@
+# Question 10A -
+# Find a Gale-Shapley implementation in python on GitHub and modify it so that the eight Super
+# Group 1 teams will be matched against the eight Super Group 2 teams. You can make up the preference
+# lists for each team. Make sure you cite any code you use or state that you wrote it from scratch if you
+# did.
+
+# Source : https://github.com/Vishal-Kancharla/Gale-Shapley-Algorithm
+
 import time
 
 
@@ -81,5 +89,6 @@ superGroup2 = [
     [4, 6, 1, 0, 7, 5, 3, 2],
     [1, 2, 4, 7, 6, 3, 5, 0],
 ]
+
 
 doStableMatchingOnWorldCupRounds(superGroup1, superGroup2)

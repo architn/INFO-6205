@@ -1,3 +1,10 @@
+# Question 10C -
+# Randomly assume certain teams win and lose each round and eliminate the losers from the
+# preference lists for each team. Can the Gale-Shapley matching algorithm be applied over and over in
+# each round (16 teams, 8 teams, 4 teams, 2 teams) to create stable matches? You can answer this with
+# code or rhetoric.
+
+
 import random
 
 

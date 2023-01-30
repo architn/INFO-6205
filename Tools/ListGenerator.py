@@ -3,16 +3,21 @@ import random
 
 def listGenerator(n):
     indexes = list(range(n))
-    preferencesForGroup1Quarters = []
-    preferencesForGroup2Quarters = []
+    preferenceList1 = []
+    preferenceList2 = []
     for x in range(n):
         shuffledList = random.sample(indexes, len(indexes))
-        preferencesForGroup1Quarters.append(shuffledList)
+        preferenceList1.append(shuffledList)
         shuffledList2 = random.sample(shuffledList, len(indexes))
-        preferencesForGroup2Quarters.append(shuffledList2)
+        preferenceList2.append(shuffledList2)
 
-    print(preferencesForGroup1Quarters)
-    print(preferencesForGroup2Quarters)
+    print(preferenceList1)
+    print(preferenceList2)
+    return preferenceList1, preferenceList2
 
 
-listGenerator(16)
+class Tools:
+    listGenerator(16)
+
+
+
