@@ -16,8 +16,7 @@ def listGenerator(n):
     return preferenceList1, preferenceList2
 
 
-class Tools:
-    listGenerator(16)
+listGenerator(8)
 
 
 

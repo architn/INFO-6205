@@ -6,12 +6,14 @@
 
 
 import random
+import time
 
 
 def stable_matching(group1, group2):
     teamsInRoundOfEight = []
     teamsInSemiFinal = []
     teamsInFinal = []
+
 
     teamsInGroup1 = {
         0: 'England',
@@ -35,9 +37,11 @@ def stable_matching(group1, group2):
     }
 
     # Round of Sixteen at World Cup
-    print("Round of 16\n")
+    print("Round of 16")
+    startTime = time.time()
     team1Pairings = doStableMatchingOnWorldCupRounds(group1, group2)
-
+    endTime = time.time()
+    print(f"\nTime taken for creating a fixture list with 16 teams: \t: {(endTime - startTime) * 10 ** 3:.03f}ms")
     for i, num in enumerate(team1Pairings):
         print(teamsInGroup1[i] + ' vs ' + teamsInGroup2[num])
         teamsPaired = [teamsInGroup1[i], teamsInGroup2[num]]

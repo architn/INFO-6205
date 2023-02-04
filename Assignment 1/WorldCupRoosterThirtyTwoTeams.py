@@ -7,7 +7,7 @@ import time
 
 
 def stable_matching(group1, group2):
-    startTime = time.time()
+
     teamsInGroup1 = {
         0: 'England',
         1: 'France',
@@ -49,6 +49,7 @@ def stable_matching(group1, group2):
     team1Pairings = [None] * n  # [None, None, None]
     team2Pairings = [None] * n  # [None, None, None]
     proposalsMadeMyTeam1 = [0] * n  # [0, 0, 0]
+    startTime = time.time()
     while unPairedTeams:
         selectedTeamFromGroup1 = unPairedTeams[0]  # 0
         preferencesOfSelectedTeam = group1[selectedTeamFromGroup1]  # [[0, 1, 2]]
@@ -75,11 +76,10 @@ def stable_matching(group1, group2):
                 unPairedTeams.insert(0, currentPairingOfOppositionTeam)
             else:
                 proposalsMadeMyTeam1[selectedTeamFromGroup1] += 1
+    endTime = time.time()
+    print(f"\nTime taken for creating a fixture list with 32 teams: \t: {(endTime - startTime) * 10 ** 3:.03f}ms")
     for i, num in enumerate(team1Pairings):
         print(teamsInGroup1[i] + ' vs ' + teamsInGroup2[num])
-
-    endTime = time.time()
-    print(f"\nTime taken for creating a fixture list with 32 teams: \t: {(endTime-startTime)*10**3:.03f}ms")
 
 
 # Driver level code to generate output
