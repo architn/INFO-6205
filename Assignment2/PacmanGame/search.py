@@ -113,8 +113,8 @@ def depthFirstSearch(problem):
         if state not in visited:
             visited.append(state)
             # visit child nodes
-            successors = problem.getSuccessors(state)
-            for child in successors:
+            childNodes = problem.getSuccessors(state)
+            for child in childNodes:
                 # store state, action and cost = 1
                 child_state = child[0]
                 child_action = child[1]
@@ -125,33 +125,9 @@ def depthFirstSearch(problem):
 
 
 def breadthFirstSearch(problem):
-    # create fringe to store nodes
-    fringe = util.Queue()
-    # track visited nodes
-    visited = []
-    # push initial state to fringe
-    fringe.push((problem.getStartState(), [], 1))
-
-    while not fringe.isEmpty():
-        node = fringe.pop()
-        state = node[0]
-        actions = node[1]
-        # goal check
-        if problem.isGoalState(state):
-            return actions
-        if state not in visited:
-            visited.append(state)
-            # visit child nodes
-            successors = problem.getSuccessors(state)
-            for child in successors:
-                # store state, action and cost = 1
-                child_state = child[0]
-                child_action = child[1]
-                if child_state not in visited:
-                    # add child nodes
-                    child_action = actions + [child_action]
-                    fringe.push((child_state, child_action, 1))
-
+    """Search the shallowest nodes in the search tree first."""
+    "*** YOUR CODE HERE ***"
+    util.raiseNotDefined()
 
 def nullHeuristic(state, problem=None):
     """
