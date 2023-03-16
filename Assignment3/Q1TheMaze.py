@@ -42,3 +42,4 @@ def hasPath(maze, start, destination) -> bool:
     return rollFrom(startPos)
 
 
+print(hasPath([[0, 0, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 1, 0], [1, 1, 0, 1, 1], [0, 0, 0, 0, 0]], [0, 4], [4, 4]))

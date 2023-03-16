@@ -1,4 +1,4 @@
-def gameOfLife(self, board) -> None:
+def gameOfLife(board) -> None:
     #  1 -> 0  : 2
     #  1 -> 1  : 1
     #  1 -> 0  : 3
@@ -34,9 +34,6 @@ def gameOfLife(self, board) -> None:
                 elif val < 2:
                     board[r][c] = 2
 
-    for i in board:
-        print(i)
-
     for r in range(row):
         for c in range(col):
             if board[r][c] == 2:
@@ -45,3 +42,9 @@ def gameOfLife(self, board) -> None:
                 board[r][c] = 0
             elif board[r][c] == 4:
                 board[r][c] = 1
+    return board
+
+
+grid = [[0, 1, 0], [0, 0, 1], [1, 1, 1], [0, 0, 0]]
+
+print(gameOfLife(grid))
